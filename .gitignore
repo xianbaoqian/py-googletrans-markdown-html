@@ -4,3 +4,4 @@ env
 !translate
 !README.md
 !requirements.txt
+!test-html-parser.py
