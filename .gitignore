@@ -1,5 +1,6 @@
 env
 *
 !.gitignore
-!translation.py
+!translate
 !README.md
+!requirements.txt
