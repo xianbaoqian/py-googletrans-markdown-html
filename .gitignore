@@ -1,0 +1,5 @@
+env
+*
+!.gitignore
+!translation.py
+!README.md
