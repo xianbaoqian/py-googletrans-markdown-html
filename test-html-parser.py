@@ -1,5 +1,7 @@
 from html.parser import HTMLParser
 
+from utils import Decrepter, Encrepter
+
 
 class MyHTMLParser(HTMLParser):
 
@@ -58,5 +60,16 @@ parser = MyHTMLParser()
 with open('test.md') as f:
     content = f.read()
 
-parser.feed(content)
-print(parser.final())
+# parser.feed(content)
+# print(parser.final())
+
+
+encrepter = Encrepter()
+encrepter.feed(content)
+encrepted = encrepter.finalize()
+
+
+decrepter = Decrepter(encrepter.tags)
+decrepter.feed(encrepted)
+decrepted = decrepter.finalize()
+print(decrepted)
